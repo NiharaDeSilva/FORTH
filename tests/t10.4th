@@ -1,0 +1,1 @@
+CONCAT2 "Hello " "World " .
