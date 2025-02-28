@@ -1,1 +1,3 @@
-CONCAT2 "Hello " "World " .
+Hello World CONCAT2 .
+
+Its Amazing CONCAT2 .

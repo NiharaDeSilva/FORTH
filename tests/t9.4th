@@ -1,1 +1,1 @@
-STR SUMMER OF 69 .
+Integer 69 STR .
