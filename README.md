@@ -11,18 +11,18 @@ Follwoing features have been added to FORTH interpreter
   * `STR`: converts the argument into a string (needs to work for all types)
   * `CONCAT2` and `CONCAT3` concatenates 2 or 3 strings from the stack (errors if arguments not strings)
 
-3. Fuctional tests have been written i test folder and the expected output has been written in .out file. 
+3. Fuctional tests have been written in the test folder and the expected output has been written in .out file. 
 
 ## How to run the code
-The project must be build using the following command:
+To build the project, use the following command:
 ```
 cabal build
-```
-Afterwards the unit tests can be run using the following command:
+``` 
+After building, you can run the unit tests with:
 ```
 runhaskell EvalSpec.hs
 ```
-Finally each test case can be run using the following command: 
+Finally, to execute individual test cases, use the following command:
 ```
 path\FORTH.exe tests/t1.4TH 
 ```
