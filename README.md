@@ -27,7 +27,7 @@ Finally, to execute individual test cases, use the following command:
 path\FORTH.exe tests/t1.4TH 
 ```
 
-## situations encountered.
+## Situations Encountered.
 
 1. GHC Version Compatibility & Cross-Platform Build Issues: 
 Initially, when I tried building the given project on macOS, I couldn't find a compatible GHC version. Therefore, I had to switch to a different operating system that the project supports in order to proceed.
