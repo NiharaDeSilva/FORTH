@@ -13,7 +13,7 @@ Follwoing features have been added to FORTH interpreter
 
 3. Fuctional tests have been written i test folder and the expected output has been written in .out file. 
 
-## how to run the code
+## How to run the code
 The project must be build using the following command:
 ```
 cabal build
