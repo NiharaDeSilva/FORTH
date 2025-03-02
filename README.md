@@ -29,7 +29,7 @@ path\FORTH.exe tests/t1.4TH
 
 ## situations encountered.
 
-1. GHC Version Compatibility & Cross-Platform Build Issues
-Initially, when I tried building the given project on macOS (aarch64-darwin), I couldn't find a compatible GHC version. Therefore, I had to switch to a different operating system that the project supports in order to proceed.
-2. Lazy Evaluation Complexity
+1. GHC Version Compatibility & Cross-Platform Build Issues: 
+Initially, when I tried building the given project on macOS, I couldn't find a compatible GHC version. Therefore, I had to switch to a different operating system that the project supports in order to proceed.
+2. Lazy Evaluation Complexity: 
 Grasping Haskell's lazy evaluation model was challenging, especially since precise control over execution order and stack operations is essential in a Forth interpreter.
