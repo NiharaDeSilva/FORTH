@@ -5,15 +5,27 @@ Familiarizing with Haskell language using 'cabal' package builder manager
 Follwoing features have been added to FORTH interpreter
 
 1.  The code has been changed in `Main.hs` so that, if the stack is not empty at the end of execution,  a message gets printed on the screen stating that stack is not empty and the stack content.
-2. Following functionalities have been added to `Eval.hs` and unit tests have been writen under `EvalSpec.hs`
+2. Following functionalities have been added to `Eval.hs` and corresponding unit tests have been writen under `EvalSpec.hs`
   * `EMIT`: takes a number from the stack and prints the character with the corresponding ASCI code
   * `CR`: prints a new line (for nice formating)
   * `STR`: converts the argument into a string (needs to work for all types)
   * `CONCAT2` and `CONCAT3` concatenates 2 or 3 strings from the stack (errors if arguments not strings)
 
-3. Write 10 complete test files `t1.4TH` to `t10.4TH` (replace existing `t1.4TH`) and 10 corresponding output files `t1.out` to `t10.out`. Your code, when executing the `*.4TH` file should produce the exact output in `*.out` file. Write the output files by hand to test the correctness of the code. These are so called "functional tests" (as opposed to the smaller unit tests)
+3. Fuctional tests have been written i test folder and the expected output has been written in .out file. 
 
 ## how to run the code
+The project must be build using the following command:
+```
+cabal build
+```
+Afterwards the unit tests can be run using the following command:
+```
+runhaskell EvalSpec.hs
+```
+Finally each test case can be run using the following command: 
+```
+path\FORTH.exe tests/t1.4TH 
+```
 
 ## situations encountered.
 
