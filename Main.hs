@@ -12,6 +12,7 @@ main = do
     let (stack, output) = interpret contents 
     putStrLn output
 
+
     if not (null stack)
         then do
             putStrLn "Stack is not empty at the end of execution"

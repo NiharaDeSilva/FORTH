@@ -41,7 +41,6 @@ runhaskell InterpretSpec.hs
 ```
 
 ## What to do as part of the assignment
-
 1. Change the code in `Main.hs` so that, if the stack is not empty at the end of execution,  a message gets printed on the screen saying so and the stack content gets printed. Make sure at least one of your test cases covers this situation.
 
 2. Add more built-in function definitions to `Eval.hs` and write unit tests for them in `EvalSpec.hs`. At a minimum, you should add operators +,-,/ ^(power) and the functions:
@@ -53,6 +52,7 @@ runhaskell InterpretSpec.hs
 3. Write 10 complete test files `t1.4TH` to `t10.4TH` (replace existing `t1.4TH`) and 10 corresponding output files `t1.out` to `t10.out`. Your code, when executing the `*.4TH` file should produce the exact output in `*.out` file. Write the output files by hand to test the correctness of the code. These are so called "functional tests" (as opposed to the smaller unit tests)
 
 4. Write a Readme.md file with notes on how to run your code, situations you encountered, etc.
+
 
 5. Submit a `.zip` archive of your project. Before you archive, remove the dist directory (since it has a large executable in it).
 

@@ -30,6 +30,16 @@
   (major1) == 4 && (major2) <  10 || \
   (major1) == 4 && (major2) == 10 && (minor) <= 1)
 #endif /* MIN_VERSION_base */
+/* package containers-0.5.10.2 */
+#ifndef VERSION_containers
+#define VERSION_containers "0.5.10.2"
+#endif /* VERSION_containers */
+#ifndef MIN_VERSION_containers
+#define MIN_VERSION_containers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 10)
+#endif /* MIN_VERSION_containers */
 /* package flow-1.0.21 */
 #ifndef VERSION_flow
 #define VERSION_flow "1.0.21"

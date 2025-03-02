@@ -13,6 +13,10 @@ Follwoing features have been added to FORTH interpreter
 
 3. Fuctional tests have been written in the test folder and the expected output has been written in .out file. 
 
+### Bonus Development
+
+User-defined functions have been implemented, with t11.4th and t12.4th files corresponding to their respective tests.
+
 ## How to run the code
 To build the project, use the following command:
 ```
@@ -26,6 +30,8 @@ Finally, to execute individual test cases, use the following command:
 ```
 path\FORTH.exe tests/t1.4TH 
 ```
+
+Note that there are 12 test cases covering the main functionalities developed
 
 ## Situations Encountered.
 
