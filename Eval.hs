@@ -82,9 +82,9 @@ eval s l = Id s : l
 evalOut :: String -> ([Val], String) -> ([Val], String) 
 
 -- EMIT: Converts an integer into an ASCII character
-evalOut "EMIT" (Integer x:tl, out)
+evalOut "EMIT" (Integer x : tl, out)
     | x < 0 || x > 255 = error "Invalid ASCII code"
-    | otherwise = (tl, out ++ [chr x])
+    | otherwise = (tl, out ++ [chr (fromIntegral x)])
 evalOut "EMIT" _ = error "Stack underflow"
 
 
