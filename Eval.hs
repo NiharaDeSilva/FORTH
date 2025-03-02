@@ -41,14 +41,20 @@ eval "-" _ = error("Stack underflow")
 
 -- Division
 -- if arguments are integers, keep result as integer
-eval "/" (Integer y: Integer x:tl)
-    | x == 0 = error "Division by zero"
-    | mod y x == 0 = Integer (y `div` x) : tl
-    | otherwise = Real (fromIntegral y / fromIntegral x) : tl
-eval "/" (y:x:tl)
-    | toFloat x == 0 = error "Division by zero"
-    | otherwise = Real (toFloat y / toFloat x) : tl
-eval "/" _ = error("Stack underflow")
+eval "/" (Integer y : Integer x : tl)
+    | x == 0    = error "Division by zero"
+    | mod x y == 0 = Integer (x `div` y) : tl  -- Integer division if exact
+    | otherwise   = Real (fromIntegral x / fromIntegral y) : tl  -- Convert to Real
+eval "/" (Real y : Real x : tl)
+    | y == 0    = error "Division by zero"
+    | otherwise = Real (x / y) : tl
+eval "/" (Integer y : Real x : tl)
+    | y == 0    = error "Division by zero"
+    | otherwise = Real (x / fromIntegral y) : tl
+eval "/" (Real y : Integer x : tl)
+    | y == 0    = error "Division by zero"
+    | otherwise = Real (fromIntegral x / y) : tl
+eval "/" _ = error "Stack underflow"
 
 
 

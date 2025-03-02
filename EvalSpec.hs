@@ -74,17 +74,17 @@ main = hspec $ do
     -- Division Tests
     context "/" $ do
         it "performs integer division" $ do
-            eval "/" [Integer 10, Integer 2] `shouldBe` [Integer 5]
-            eval "/" [Integer 9, Integer 3] `shouldBe` [Integer 3]
+            eval "/" [Integer 2, Integer 10] `shouldBe` [Integer 5]
+            eval "/" [Integer 3, Integer 9] `shouldBe` [Integer 3]
 
         it "performs float division" $ do
-            eval "/" [Integer 10,  Real 2.0] `shouldBe` [Real 5.0]
-            eval "/" [Real 10.0, Integer 5] `shouldBe` [Real 2.0]
-            eval "/" [Real 7.5, Real 3.0] `shouldBe` [Real 2.5]
+            eval "/" [Real 2.0, Integer 10] `shouldBe` [Real 5.0]
+            eval "/" [Integer 5, Real 10.0] `shouldBe` [Real 2.0]
+            eval "/" [ Real 3.0, Real 7.5] `shouldBe` [Real 2.5]
 
         it "errors on division by zero" $ do
             evaluate (eval "/" [Integer 5, Integer 0]) `shouldThrow` errorCall "Division by zero"
-            evaluate (eval "/" [Real 5.0, Real 0.0]) `shouldThrow` errorCall "Division by zero"
+            evaluate (eval "/" [Real 0.0, Real 5.0]) `shouldThrow` errorCall "Division by zero"
 
         it "errors on too few arguments" $ do
             evaluate (eval "/" []) `shouldThrow` errorCall "Stack underflow"
